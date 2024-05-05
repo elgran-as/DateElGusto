@@ -1,0 +1,1 @@
+export const baseUrl = "https://date-el-gusto-9f5f5-default-rtdb.firebaseio.com/"
