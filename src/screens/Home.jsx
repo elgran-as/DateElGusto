@@ -40,4 +40,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
   },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    width:"100%",
+  },
 })
