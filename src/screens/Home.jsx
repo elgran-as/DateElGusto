@@ -1,43 +1,38 @@
-
-import { FlatList, StyleSheet, Text, View, ImageBackground } from "react-native";
+import { ImageBackground, FlatList, StyleSheet, Text, View } from "react-native";
 import { colors } from "../constants/colors";
 import CategoryItem from "../components/CategoryItem";
+
 import { useGetCategoriesQuery } from "../services/shopService";
 
-const Home = ({ route, navigation }) => {
-  const { data: categories, error, isLoading } = useGetCategoriesQuery();
+const Home = ({ route, navigation}) => {
+  const {data: categories, error, isLoading} = useGetCategoriesQuery()
+
+const image = {uri: 'https://images.unsplash.com/photo-1576867757603-05b134ebc379?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'};
 
   return (
-    <ImageBackground source={{ uri: 'https://thumbs.dreamstime.com/z/fondo-de-cocina-con-mesa-madera-blanca-alimentos-marco-comida-sobre-verduras-frescas-especias-hierbas-y-aceite-ingredientes-para-187070339.jpg' }} style={styles.backgroundImage}>
-      <View style={styles.contentContainer}>
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          keyExtractor={(element) => element.id}
-          data={categories}
-          renderItem={({ item }) => (
-            <CategoryItem
-              navigation={navigation}
-              category={item}
-            />
-          )}
-        />
-      </View>
-    </ImageBackground>
-  );
-};
+    <View style={styles.flatListContainer}>
+       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        keyExtractor={(elemntoDeMiArray) => elemntoDeMiArray}
+        data={categories}
+        renderItem={({ item }) => (
+          <CategoryItem 
+            navigation={navigation} 
+            category={item} 
+          />
+        )}
+      />
+      </ImageBackground>
+    </View>
+  )
+}
 
-export default Home;
+export default Home
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  contentContainer: {
-    width: '100%',
+  flatListContainer: {
+    width: "100%",
     backgroundColor: colors.teal400,
     flex: 1,
     flexDirection: "column",
@@ -45,4 +40,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
   },
-});
+})

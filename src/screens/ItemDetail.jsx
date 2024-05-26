@@ -7,10 +7,10 @@ import {
   useWindowDimensions
 } from "react-native"
 import React, { useEffect, useState } from "react";
-
 import { useGetProductByIdQuery } from "../services/shopService";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../features/Cart/cartSlice";
+import Counter from "../components/Counter";
 
 const ItemDetail = ({ route, navigation }) => {
 
@@ -54,6 +54,7 @@ const ItemDetail = ({ route, navigation }) => {
             <Text style={styles.price}>${product.price}</Text>
             <Button title="Add cart" onPress={handleAddCart}></Button>
           </View>
+          {/* <Counter/> */}
         </View>
       ) : null}
     </View>
