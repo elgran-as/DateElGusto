@@ -37,22 +37,23 @@ export default ProductItem
 
 const styles = StyleSheet.create({
   image: {
-    height: 120,
-    width: "30%",
+    height: 90,
+    width: "90%",
     borderRadius: 8,
   },
   additionalStylesCard: {
-    height: 120,
-    width: 300,
+    height: 150,
+    width: 150,
     margin: 10,
   },
   textCategory: {
-    width: "70%",
-    color: colors.teal200,
+    width: "80%",
+    color: colors.platinum,
+    justifyContent:"center",
   },
   pressable: {
     width: "100%",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
     paddingLeft: 10,

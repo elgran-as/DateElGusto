@@ -8,7 +8,7 @@ const CartItem = ({ cartItem }) => {
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
-                <Text style={styles.text2}>{cartItem.brand}</Text>
+                <Text style={styles.text2}>{cartItem.discountPercentag}</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
             </View>
             <Entypo name="trash" size={30} color="black" />

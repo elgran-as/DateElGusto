@@ -85,11 +85,11 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 250,
+    height: 200,
   },
   imageLandscape: {
     width: '45%',
-    height: 200
+    height: 150,
   },
   textContainer: {
     flexDirection: "column",

@@ -3,6 +3,7 @@ import React from "react";
 import CartItem from "../components/CartItem";
 import { useSelector } from "react-redux";
 import { usePostOrderMutation } from "../services/shopService";
+import { colors } from "../constants/colors";
 
 
 const Cart = () => {
@@ -15,8 +16,7 @@ const Cart = () => {
     /* const { items: cartItems, total } = useSelector((state) => state.cart.value)
     const [triggerPost, result] = usePostOrderMutation()
 
-    console.log(cartItems)
-    console.log(result) */
+  
 
     /* let total = 0
     for (const currentItem of CartData) {
@@ -50,7 +50,7 @@ const Cart = () => {
                 }}
             />
             <View style={styles.totalContainer}>
-                <Pressable onPress={onConfirmOrder}>
+                <Pressable onPress={onConfirmOrder} style={styles.ConfirmTotal}>
                     <Text>Confirm</Text>
                 </Pressable>
                 <Text>Total: ${total}</Text>
@@ -71,5 +71,9 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        
     },
+    ConfirmTotal:{
+        backgroundColor: colors.teal600,
+    }
 })
