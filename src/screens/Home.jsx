@@ -1,7 +1,6 @@
 import { ImageBackground, FlatList, StyleSheet, Text, View } from "react-native";
 import { colors } from "../constants/colors";
 import CategoryItem from "../components/CategoryItem";
-
 import { useGetCategoriesQuery } from "../services/shopService";
 
 const Home = ({ route, navigation}) => {
@@ -14,7 +13,7 @@ const image = {uri: 'https://images.unsplash.com/photo-1576867757603-05b134ebc37
        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
       <FlatList
         showsVerticalScrollIndicator={false}
-        keyExtractor={(elemntoDeMiArray) => elemntoDeMiArray}
+        keyExtractor={(elemnt) => elemnt}
         data={categories}
         renderItem={({ item }) => (
           <CategoryItem 
