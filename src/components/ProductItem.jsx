@@ -38,24 +38,26 @@ export default ProductItem
 const styles = StyleSheet.create({
   image: {
     height: 90,
-    width: "90%",
-    borderRadius: 8,
+    width: 150,
+    borderRadius: 10,
+   
   },
   additionalStylesCard: {
-    height: 150,
-    width: 150,
+    height: 130,
+    width: 170,
     margin: 10,
   },
   textCategory: {
-    width: "80%",
+    width: "96%",
     color: colors.platinum,
     justifyContent:"center",
+    textAlign: "center",
+    marginTop: 8,
   },
   pressable: {
     width: "100%",
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingLeft: 10,
   },
 })

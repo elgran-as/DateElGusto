@@ -11,7 +11,7 @@
     "rating": 4.6,
     "stock": 50,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg",
-    "title": "Pizza Napolitana"
+    "title": "Napolitana"
   },
   {
     "category": "Pizzas",
@@ -25,7 +25,7 @@
     "rating": 4.9,
     "stock": 60,
     "thumbnail": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-pizza-siciliana-1-730x449.jpg",
-    "title": "Pizza Siciliana"
+    "title": "Siciliana"
   },
   {
     "category": "Pizzas",
@@ -39,7 +39,7 @@
     "rating": 5.1,
     "stock": 50,
     "thumbnail": "https://cdn.pixabay.com/photo/2016/04/21/22/50/pizza-1344720_1280.jpg",
-    "title": "Pizza New York"
+    "title": "New York"
   },
   {
     "category": "Pizzas",
@@ -53,7 +53,7 @@
     "rating": 4.1,
     "stock": 20,
     "thumbnail": "https://cdn.pixabay.com/photo/2016/04/11/15/30/pizza-1322282_1280.jpg",
-    "title": "Pizza Chicago "
+    "title": "Chicago "
   },
   {
     "category": "Pizzas",
@@ -67,7 +67,7 @@
     "rating": 4.1,
     "stock": 20,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/08/19/14/43/pizza-5501073_1280.jpg",
-    "title": "Pizza Hawaiana"
+    "title": "Hawaiana"
   },
   {
     "category": "Pizzas",
@@ -81,7 +81,7 @@
     "rating": 4.9,
     "stock": 60,
     "thumbnail": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg",
-    "title": "Pizza Mexicana"
+    "title": "Mexicana"
   },
   {
     "category": "Pizzas",
@@ -95,7 +95,7 @@
     "rating": 4.8,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2023/05/09/09/22/ai-generated-7980814_1280.jpg",
-    "title": "Pizza Cuatro estaciones"
+    "title": "Cuatro estaciones"
   },
   {
     "category": "Pizzas",
@@ -109,7 +109,7 @@
     "rating": 5.1,
     "stock": 70,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/06/17/21/46/pizza-5311269_1280.jpg",
-    "title": "Pizza Cuatro Quesos"
+    "title": "Cuatro Quesos"
   },
   {
     "category": "Pizzas",
@@ -123,7 +123,7 @@
     "rating": 4.1,
     "stock": 20,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/05/17/04/22/pizza-5179939_1280.jpg",
-    "title": "Pizza de Pollo"
+    "title": "de Pollo"
   },
   {
     "category": "Pizzas",
@@ -137,7 +137,7 @@
     "rating": 4.1,
     "stock": 20,
     "thumbnail": "https://cdn.pixabay.com/photo/2018/04/07/15/03/pizza-3298685_1280.jpg",
-    "title": "Pizza Vegetariana"
+    "title": "Vegetariana"
   },
   {
     "category": "Hamburguesas",
@@ -151,7 +151,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2017/09/02/13/38/burger-2707320_1280.jpg",
-    "title": "Hamburguesa clasica"
+    "title": "Clasica"
   },
   {
     "category": "Hamburguesas",
@@ -165,7 +165,7 @@
     "rating": 4.1,
     "stock": 20,
     "thumbnail": "https://cdn.pixabay.com/photo/2014/09/03/15/05/sandwich-434658_1280.jpg",
-    "title": "Hamburguesa de Pollo"
+    "title": "de Pollo"
   },
   {
     "category": "Hamburguesas",
@@ -179,7 +179,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/10/05/19/55/hamburger-5630646_1280.jpg",
-    "title": "Hamburguesa Vegana"
+    "title": "Vegana"
   },
   {
     "category": "Hamburguesas",
@@ -193,7 +193,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2017/02/09/14/01/kebab-2052339_1280.jpg",
-    "title": "Hamburguesa de Pavo"
+    "title": "de Pavo"
   },
   {
     "category": "Hamburguesas",
@@ -207,7 +207,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2016/08/31/21/47/burger-1634705_1280.jpg",
-    "title": "Hamburguesa BBQ"
+    "title": "BBQ"
   },
   {
     "category": "Hamburguesas",
@@ -220,8 +220,8 @@
     "price": 16.99,
     "rating": 4.9,
     "stock": 40,
-    "thumbnail": "https://cdn.pixabay.com/photo/2023/05/07/10/20/burger-7976098_1280.jpg",
-    "title": "Hamburguesa de Sushi"
+    "thumbnail": "https://assets.unileversolutions.com/recipes-v2/231539.png?imwidth=2000",
+    "title": "de Sushi"
   },
   {
     "category": "Hamburguesas",
@@ -235,7 +235,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2019/01/21/12/47/burger-3946012_1280.jpg",
-    "title": "Hamburguesa Mexicana"
+    "title": "Mexicana"
   },
   {
     "category": "Hamburguesas",
@@ -249,7 +249,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2021/01/06/10/11/burger-5893927_1280.jpg",
-    "title": "Hamburguesa de Salmón"
+    "title": "de Salmón"
   },
   {
     "category": "Empanadas",
@@ -263,7 +263,7 @@
     "rating": 4.9,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/04/23/02/27/pasties-5080794_1280.jpg",
-    "title": "Empanada de berenjena y queso"
+    "title": "de berenjena y queso"
   },
   {
     "category": "Empanadas",
@@ -277,7 +277,7 @@
     "rating": 4.8,
     "stock": 90,
     "thumbnail": "https://cdn.pixabay.com/photo/2018/05/19/05/05/empanadas-3412786_1280.jpg",
-    "title": "Empanadas Sanjuaninas"
+    "title": "Sanjuaninas"
   },
   {
     "category": "Empanadas",
@@ -291,7 +291,7 @@
     "rating": 4.7,
     "stock": 120,
     "thumbnail": "https://th.bing.com/th/id/OIP.c2pVJPBlG3FonNAHHnrBnAAAAA?rs=1&pid=ImgDetMain",
-    "title": "Empanadas de patatas y carne"
+    "title": "de patatas y carne"
   },
   {
     "category": "Empanadas",
@@ -305,7 +305,7 @@
     "rating": 4.7,
     "stock": 120,
     "thumbnail": "https://th.bing.com/th/id/OIP.cq0WNdygdnzEaPJ8JsxA1gHaEK?rs=1&pid=ImgDetMain",
-    "title": "Empanadas árabes"
+    "title": "Arabes"
   },
   {
     "category": "Empanadas",
@@ -333,7 +333,7 @@
     "rating": 4.5,
     "stock": 90,
     "thumbnail": "https://cdn.pixabay.com/photo/2018/08/15/00/07/fried-food-3606942_1280.jpg",
-    "title": "Empanada de hojaldre con pisto y atún"
+    "title": "Hojaldre con pisto y atún"
   },
   {
     "category": "Empanadas",
@@ -347,7 +347,7 @@
     "rating": 4.1,
     "stock": 50,
     "thumbnail": "https://cdn.pixabay.com/photo/2010/12/10/08/dumplings-1111_1280.jpg",
-    "title": "Empanada de tomate"
+    "title": "de tomate"
   },
   {
     "category": "Empanadas",
@@ -361,7 +361,7 @@
     "rating": 4.8,
     "stock": 120,
     "thumbnail": "https://cocinachic.net/wp-content/uploads/2014/02/h.jpg",
-    "title": "Empanada de humita"
+    "title": "de humita"
   },
   {
     "category": "Sandwich",
@@ -375,7 +375,7 @@
     "rating": 4.9,
     "stock": 200,
     "thumbnail": "https://cdn.pixabay.com/photo/2017/05/10/17/27/sandwich-2301387_1280.jpg",
-    "title": "Sandwich Caprese"
+    "title": "Caprese"
   },
   {
     "category": "Sandwich",
@@ -389,7 +389,7 @@
     "rating": 4.2,
     "stock": 100,
     "thumbnail": "https://cdn.pixabay.com/photo/2016/08/23/23/11/egg-1615790_960_720.jpg",
-    "title": "Sandwich de aguacate, huevo y rabanito"
+    "title": "aguacate, huevo y rabanito"
   },
   {
     "category": "Sandwich",
@@ -403,7 +403,7 @@
     "rating": 4.1,
     "stock": 50,
     "thumbnail": "https://cdn.pixabay.com/photo/2021/11/18/10/15/sandwich-6806036_1280.jpg",
-    "title": "Sandwich de salmon ahumado con huevo"
+    "title": "Salmon ahumado con huevo"
   },
   {
     "category": "Sandwich",
@@ -417,7 +417,7 @@
     "rating": 4.1,
     "stock": 500,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/11/02/17/22/sandwich-5707372_1280.jpg",
-    "title": "Sandwich integral de remolacha y queso cremoso"
+    "title": "Remolacha y queso cremoso"
   },
   {
     "category": "Sandwich",
@@ -431,7 +431,7 @@
     "rating": 4.1,
     "stock": 500,
     "thumbnail": "https://cdn.pixabay.com/photo/2021/11/30/18/01/redfish-sandwich-6835933_1280.jpg",
-    "title": "Sandwich nordico de salmon"
+    "title": "Nordico de salmon"
   },
   {
     "category": "Sandwich",
@@ -445,7 +445,7 @@
     "rating": 4.1,
     "stock": 50,
     "thumbnail": "https://cdn.pixabay.com/photo/2016/03/05/22/24/bread-1239274_1280.jpg",
-    "title": "Sandwich integral con verduras y queso"
+    "title": "Integral con verduras y queso"
   },
   {
     "category": "Sandwich",
@@ -459,7 +459,7 @@
     "rating": 4.3,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2015/04/01/18/28/submarine-sandwich-702802_1280.jpg",
-    "title": "Sandwich blt con bacon, tomate, lechuga y aguacate"
+    "title": "Blt con bacon, tomate, lechuga y aguacate"
   },
   {
     "category": "Sandwich",
@@ -473,7 +473,7 @@
     "rating": 4.3,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2015/08/16/12/02/sandwich-890822_1280.jpg",
-    "title": "Sandwich de tortilla con patata y queso"
+    "title": "Tortilla con patata y queso"
   },
   {
     "category": "Sandwich",
@@ -487,7 +487,7 @@
     "rating": 4.5,
     "stock": 40,
     "thumbnail": "https://cdn.pixabay.com/photo/2015/08/16/12/03/sandwich-890823_1280.jpg",
-    "title": "Sandwich de pan de jengibre, pera y crema de chocolate"
+    "title": "Pan de jengibre, pera y crema de chocolate"
   },
   {
     "category": "Panchos",
@@ -501,7 +501,7 @@
     "rating": 4.2,
     "stock": 40,
     "thumbnail": "https://st2.depositphotos.com/1326558/9060/i/450/depositphotos_90604540-stock-photo-hot-dogs-with-vegetables.jpg",
-    "title": "Pancho a la chilena"
+    "title": "a la chilena"
   },
   {
     "category": "Panchos",
@@ -515,7 +515,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://th.bing.com/th/id/R.e2823384333fc9cea4bd80aa1989b274?rik=yYBWiJXXGY%2fF9Q&pid=ImgRaw&r=0",
-    "title": "Pancho a la hawaiana"
+    "title": "a la hawaiana"
   },
   {
     "category": "Panchos",
@@ -529,7 +529,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2020/06/24/22/45/hot-dog-5337929_1280.jpg",
-    "title": "Pancho a la mexicana"
+    "title": "a la mexicana"
   },
   {
     "category": "Panchos",
@@ -543,7 +543,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2021/02/15/11/43/hot-dog-6017568_1280.jpg",
-    "title": "Pancho a la alemana"
+    "title": "a la alemana"
   },
   {
     "category": "Panchos",
@@ -557,7 +557,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2017/06/24/05/26/hot-dog-2436747_1280.jpg",
-    "title": "Pancho a la neoyorquina"
+    "title": "a la neoyorquina"
   },
   {
     "category": "Panchos",
@@ -571,7 +571,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2015/03/03/07/21/hot-dog-657039_1280.jpg",
-    "title": "Pancho a la sureña"
+    "title": "a la sureña"
   },
   {
     "category": "Panchos",
@@ -585,7 +585,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://cdn.pixabay.com/photo/2024/05/06/17/15/hot-dog-8743818_1280.jpg",
-    "title": "Pancho a la francesa"
+    "title": "a la francesa"
   },
   {
     "category": "Panchos",
@@ -599,7 +599,7 @@
     "rating": 4.1,
     "stock": 30,
     "thumbnail": "https://truffle-assets.tastemadecontent.net/1t1bxm43v4e3_6su5xIEZXy028CY6Weokym_super-pancho_landscapeThumbnail_en-US.jpeg",
-    "title": "Pancho a la india"
+    "title": "a la india"
   },
   {
     "category": "Panchos",
@@ -613,7 +613,7 @@
     "rating": 4.9,
     "stock": 100,
     "thumbnail": "https://cdn.pixabay.com/photo/2012/02/29/16/12/hot-19456_1280.jpg",
-    "title": "Pancho a la argentina"
+    "title": "a la argentina"
   },
   {
     "category": "Guarniciones",
