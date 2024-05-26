@@ -22,12 +22,12 @@ const ProductItem = ({
         style={styles.pressable}
         onPress={handleNavigate}
       >
-        <Text style={styles.textCategory}>{product.title}</Text>
         <Image
           resizeMode="cover"
           style={styles.image}
           source={{ uri: product.images[0] }}
         />
+        <Text style={styles.textCategory}>{product.title}</Text>
       </Pressable>
     </Card>
   )

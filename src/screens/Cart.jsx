@@ -24,7 +24,7 @@ const Cart = () => {
             // Navega hacia la pantalla inicial
             navigation.reset({
                 index: 0,
-                routes: [{ name: "Home" }], 
+                routes: [{ name: 'Home' }], 
             });
         }
     }

@@ -60,6 +60,7 @@ const ItemListCategory = ({
           <ProductItem product={item} navigation={navigation}/>
         )}
         keyExtractor={(producto) => producto.id}
+        numColumns={2}
       />
     </View>
   )
