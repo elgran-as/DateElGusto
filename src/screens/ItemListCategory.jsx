@@ -18,9 +18,6 @@ const ItemListCategory = ({
 
   const {data: productsFetched, error: errorFromFetch, isLoading} = useGetProductsByCategoryQuery(categorySelected)
 
-  /* console.log(errorFromFetch);
-  console.log(isLoading); */
-
   useEffect(() => {
     //Products filtered by category
 
@@ -40,9 +37,6 @@ const ItemListCategory = ({
       return
     }
 
-    /* const productsPrefiltered = products.filter(
-      (product) => product.category === categorySelected
-    ) */
     //Product filtered by name
     if (!isLoading) {
       const productsFilter = productsFetched.filter((product) =>

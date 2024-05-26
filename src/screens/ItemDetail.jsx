@@ -27,13 +27,6 @@ const ItemDetail = ({ route, navigation }) => {
     else setOrientation("portrait")
   }, [width, height])
 
-  /* useEffect(() => {
-    //Encontrar el producto por su id
-    const productSelected = allProducts.find(
-      (product) => product.id === idSelected
-    )
-    setProduct(productSelected)
-  }, [idSelected]) */
 
   const handleAddCart = () => {
     dispatch(addCartItem({...product, quantity: 1}))
@@ -89,7 +82,7 @@ const styles = StyleSheet.create({
   },
   imageLandscape: {
     width: '45%',
-    height: 150,
+    height: 200
   },
   textContainer: {
     flexDirection: "column",

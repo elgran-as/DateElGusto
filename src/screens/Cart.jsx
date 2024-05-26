@@ -4,38 +4,29 @@ import CartItem from "../components/CartItem";
 import { useSelector } from "react-redux";
 import { usePostOrderMutation } from "../services/shopService";
 import { colors } from "../constants/colors";
-
+import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
 
 const Cart = () => {
-
 
     const {localId} = useSelector(state => state.auth.value)
     const {items: CartData, total} = useSelector(state => state.cart.value)
 
     const [triggerPostOrder, result] = usePostOrderMutation()
-    /* const { items: cartItems, total } = useSelector((state) => state.cart.value)
-    const [triggerPost, result] = usePostOrderMutation()
 
-  
+    const navigation = useNavigation(); // Usa useNavigation
 
-    /* let total = 0
-    for (const currentItem of CartData) {
-        console.log(currentItem.id);
-        total += currentItem.price * currentItem.quantity
-    } */
+    const onConfirmOrder = async () => {
+        await triggerPostOrder({items: CartData, user: localId, total});
+        if (!result.error) {
+            // Limpia el carrito
+            
 
-    /* onConfirm = () => {
-        triggerPost({
-            total,
-            items: cartItems,
-            user: "userLoggedId",
-            date: new Date().toLocaleString(),
-        })
-    } */
-
-    const onConfirmOrder = () => {
-        triggerPostOrder({items: CartData, user: localId, total})
-        //Una vez generada la orden hay que limpiar el cart y/o que navegue hacia Home
+            // Navega hacia la pantalla inicial
+            navigation.reset({
+                index: 0,
+                routes: [{ name: "Home" }], 
+            });
+        }
     }
 
     console.log(result);
@@ -44,7 +35,7 @@ const Cart = () => {
         <View style={styles.container}>
             <FlatList
                 data={CartData}
-                keyExtractor={(pepe) => pepe.id}
+                keyExtractor={(item) => item.id}
                 renderItem={({ item }) => {
                     return <CartItem cartItem={item} />
                 }}
@@ -71,7 +62,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        
     },
     ConfirmTotal:{
         backgroundColor: colors.teal600,
