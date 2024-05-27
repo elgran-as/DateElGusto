@@ -1,22 +1,28 @@
-import { FlatList, StyleSheet, Text, View } from "react-native"
-import { colors } from "../constants/colors"
-import CategoryItem from "../components/CategoryItem"
-import categories from "../data/categories.json"
+import { ImageBackground, FlatList, StyleSheet, Text, View } from "react-native";
+import { colors } from "../constants/colors";
+import CategoryItem from "../components/CategoryItem";
+import { useGetCategoriesQuery } from "../services/shopService";
 
-const Home = ({ setCategorySelected }) => {
+const Home = ({ route, navigation}) => {
+  const {data: categories, error, isLoading} = useGetCategoriesQuery()
+
+const image = {uri: 'https://images.unsplash.com/photo-1576867757603-05b134ebc379?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'};
+
   return (
     <View style={styles.flatListContainer}>
+       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
       <FlatList
         showsVerticalScrollIndicator={false}
-        keyExtractor={(elemntoDeMiArray) => elemntoDeMiArray}
-        data={categories.sort()}
+        keyExtractor={(elemnt) => elemnt}
+        data={categories}
         renderItem={({ item }) => (
           <CategoryItem 
-            selectCategory={setCategorySelected} 
+            navigation={navigation} 
             category={item} 
           />
         )}
       />
+      </ImageBackground>
     </View>
   )
 }
@@ -32,5 +38,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 10,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    width:"100%",
   },
 })
