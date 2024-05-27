@@ -1,11 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { colors } from '../constants/colors'
+import { StyleSheet, Text, View, useWindowDimensions } from "react-native";
+import React from "react";
+import { colors } from "../constants/colors";
+import { useSelector } from "react-redux";
 
-const Header = ({title}) => {
+const Header = ({route}) => {
+
+  const categorySelected = useSelector(state => state.shop.value.categorySelected)
+
+  const {height, width} = useWindowDimensions()
   return (
     <View style = {styles.container}>
-      <Text style = {styles.text}>{title}</Text>
+      <Text style = {width > 360 ? styles.text: styles.textSm}>{route.name}</Text>
     </View>
   )
 }
@@ -24,5 +29,10 @@ const styles = StyleSheet.create({
     color: colors.teal200,
     fontFamily: 'Josefin',
     fontSize: 22
+  },
+  textSm: {
+    color: colors.teal200,
+    fontFamily: 'Josefin',
+    fontSize: 16
   }
 })

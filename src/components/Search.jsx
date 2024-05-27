@@ -1,14 +1,12 @@
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native"
-import React, { useState } from "react"
-import { FontAwesome } from "@expo/vector-icons"
-import { FontAwesome5 } from "@expo/vector-icons"
-import { AntDesign } from "@expo/vector-icons"
-import { colors } from "../constants/colors"
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import React, { useState } from "react";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
+import { colors } from "../constants/colors";
 import { FontAwesome6 } from '@expo/vector-icons';
 
 const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
   const [keyword, setKeyword] = useState("")
-  console.log(error);
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
@@ -22,13 +20,13 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
 
       </View>
       <Pressable onPress={() => onSearch(keyword)}>
-        <FontAwesome6 name="searchengin" size={24} color="white" />
+        <FontAwesome6 name="magnifying-glass" size={20} color="black" />
       </Pressable>
       <Pressable onPress={() => setKeyword("")}>
-        <FontAwesome5 name="eraser" size={24} color="white" />
+        <FontAwesome5 name="eraser" size={20} color="black" />
       </Pressable>
       <Pressable onPress={goBack}>
-        <AntDesign name="back" size={24} color="white" />
+        <FontAwesome6 name="arrow-rotate-left" size={20} color="black" />
       </Pressable>
     </View>
   )
@@ -47,14 +45,14 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: 'center',
     alignItems: 'start',
-    gap: 4
+    gap: 4,
+    width: '70%',
   },
   input: {
-    width: 250,
     padding: 8,
     fontSize: 18,
     backgroundColor: colors.teal400,
-    color: colors.platinum,
+    color: colors.teal900,
     borderRadius: 10,
   },
   errorText: {

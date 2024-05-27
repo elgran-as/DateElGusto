@@ -1,19 +1,34 @@
-import { Image, StyleSheet, Text } from 'react-native'
-import React from 'react'
-import Card from './Card'
-import { colors } from '../constants/colors'
+import { Image, StyleSheet, Text, Pressable } from "react-native";
+import React from "react";
+import Card from "./Card";
+import { colors } from "../constants/colors";
+import { useDispatch } from "react-redux";
+import { setIdSelected } from "../features/Shop/shopSlice";
 
-const ProductItem = ({product}) => {
+const ProductItem = ({
+  product,
+  setProductSelected = () => {},
+  navigation,
+}) => {
+
+  const dispatch = useDispatch()
+  const handleNavigate = () => {
+    dispatch(setIdSelected(product.title))
+    navigation.navigate('ItemDetail', {productId: product.id})
+  }
   return (
-    <Card
-      style={styles.additionalStylesCard}
-    >
-        <Text style={styles.textCategory}>{product.title}</Text>
-        <Image 
-          resizeMode='cover'
-          style = {styles.image}
-          source={{uri: product.images[0]}}
+    <Card style={styles.additionalStylesCard}>
+      <Pressable
+        style={styles.pressable}
+        onPress={handleNavigate}
+      >
+        <Image
+          resizeMode="cover"
+          style={styles.image}
+          source={{ uri: product.images[0] }}
         />
+        <Text style={styles.textCategory}>{product.title}</Text>
+      </Pressable>
     </Card>
   )
 }
@@ -22,19 +37,27 @@ export default ProductItem
 
 const styles = StyleSheet.create({
   image: {
-    height: 120,
-    width: 100,
-    borderRadius: 8
+    height: 90,
+    width: 150,
+    borderRadius: 10,
+   
   },
   additionalStylesCard: {
-    paddingLeft: 10,
-    flexDirection: 'row',
-    height: 120,
-    width: 300,
-    justifyContent: 'space-between',
+    height: 130,
+    width: 170,
     margin: 10,
   },
   textCategory: {
-    color: colors.teal200
-  }
+    width: "96%",
+    color: colors.platinum,
+    justifyContent:"center",
+    textAlign: "center",
+    marginTop: 8,
+  },
+  pressable: {
+    width: "100%",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 })

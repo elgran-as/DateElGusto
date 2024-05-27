@@ -1,6 +1,6 @@
-import { StyleSheet, View } from 'react-native'
-import React from 'react'
-import { colors } from '../constants/colors'
+import { StyleSheet, View } from "react-native";
+import React from "react";
+import { colors } from "../constants/colors";
 
 const Card = ({children, style}) => {
   return (
@@ -15,7 +15,7 @@ export default Card
 const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.teal600,
-        width: 250,
+        width: 200,
         height: 40,
         shadowColor: colors.platinum,
         shadowOffset: {
