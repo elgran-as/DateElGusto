@@ -3,26 +3,15 @@ import React from "react";
 import { colors } from "../constants/colors";
 import { Entypo } from "@expo/vector-icons";
 
-<<<<<<< HEAD
 const CartItem = ({ cartItem, onDelete }) => {
-=======
-const CartItem = ({ cartItem }) => {
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     return (
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
-<<<<<<< HEAD
                 <Text style={styles.text2}>{cartItem.discountPercentag}</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
             </View>
             <Entypo name="trash" size={30} color="black" onPress={onDelete}  />
-=======
-                <Text style={styles.text2}>{discountPercentaged}</Text>
-                <Text style={styles.text2}>${cartItem.price}</Text>
-            </View>
-            <Entypo name="trash" size={30} color="black" />
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
         </View>
     );
 };

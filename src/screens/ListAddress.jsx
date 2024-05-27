@@ -5,9 +5,6 @@ import AddButton from "../components/AddButton";
 import { useGetLocationQuery } from "../services/shopService";
 import AddressItem from "../components/AddressItem";
 
-/* import AddressItem from '../Components/AddressItem'
-import { useGetUserLocationQuery } from "../Services/shopServices"; */
-
 const ListAddress = ({ navigation }) => {
     const { localId } = useSelector((state) => state.auth.value)
 

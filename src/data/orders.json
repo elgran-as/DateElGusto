@@ -5,7 +5,6 @@
         "createdAt": 1679869276580,
         "items": [
             {
-<<<<<<< HEAD
                 "id": 1,
                 "title": "Pizza Napolitana",
                 "description": "La auténtica pizza italiana nació en Nápoles y lleva con orgullo su nombre. Es una pizza irregular (tiende a ser redonda, pero en realidad no tiene una forma establecida) y, por tradición, tiene unas bases muy estrictas. Este tipo de pizza tiene una masa suave y esponjosa, con un grosor medio, por lo que no es crujiente pero no peca de tener demasiada masa, simplemente lleva la masa perfecta.",
@@ -19,24 +18,6 @@
                     "require('./assets/images/pizza napolitana.jpg')",
                     "require('./assets/images/pizza-2.jpg')",
                     "require('./assets/images/pizza-3.jpg')"
-=======
-                "id": 69,
-                "title": "Golden Watch Pearls Bracelet Watch",
-                "description": "Product details of Golden Watch Pearls Bracelet Watch For Girls - Golden Chain Ladies Bracelate Watch for Women",
-                "price": 47,
-                "discountPercentage": 17.55,
-                "rating": 4.77,
-                "stock": 89,
-                "brand": "Watch Pearls",
-                "category": "womens-watches",
-                "thumbnail": "https://i.dummyjson.com/data/products/69/thumbnail.jpg",
-                "images": [
-                    "https://i.dummyjson.com/data/products/69/1.jpg",
-                    "https://i.dummyjson.com/data/products/69/2.jpg",
-                    "https://i.dummyjson.com/data/products/69/3.webp",
-                    "https://i.dummyjson.com/data/products/69/4.jpg",
-                    "https://i.dummyjson.com/data/products/69/thumbnail.jpg"
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
                 ],
                 "quantity": 1
             },

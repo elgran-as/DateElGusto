@@ -20,27 +20,19 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-<<<<<<< HEAD
       },
       "package": "com.spancavil.rn53285"
-=======
-      }
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-<<<<<<< HEAD
     ],
     "extra": {
       "eas": {
         "projectId": "7f8075df-14ef-4621-8c88-f7867ff9285e"
       }
     }
-=======
-    ]
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
   }
 }

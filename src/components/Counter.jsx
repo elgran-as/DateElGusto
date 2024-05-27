@@ -10,10 +10,6 @@ const Counter = () => {
     const [inputToAdd, setInputToAdd] = useState(null);
     // let count = 0
     
-<<<<<<< HEAD
-=======
-    console.log(count);
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
     return (
         <View style={styles.container}>

@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import { StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import React from "react";
 import { colors } from "../constants/colors";
 import { useSelector } from "react-redux";
-=======
-import { StyleSheet, Text, View, useWindowDimensions } from 'react-native'
-import React from 'react'
-import { colors } from '../constants/colors'
-import { useSelector } from 'react-redux'
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
 const Header = ({route}) => {
 

@@ -13,11 +13,7 @@ const OrderItem = ({ order }) => {
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>
-<<<<<<< HEAD
                     {new Date(order?.createdAt || null).toLocaleString()}
-=======
-                    {new Date(order.createdAt).toLocaleString()}
->>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
                 </Text>
                 <Text style={styles.text2}>${total}</Text>
             </View>
