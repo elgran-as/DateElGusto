@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Image, View, StyleSheet, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
+<<<<<<< HEAD
 import * as ExpoLibrary from "expo-media-library";
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 import { useDispatch, useSelector } from "react-redux";
 import { setCameraImage } from "../features/User/userSlice";
 import AddButton from "../components/AddButton";
 import { colors } from "../constants/colors";
+<<<<<<< HEAD
 import { useGetProfileImageQuery, usePostProfileImageMutation } from "../services/shopService";
 
 
@@ -20,6 +24,19 @@ const ImageSelector = ({ navigation }) => {
 
     const [triggerPostImage, result] = usePostProfileImageMutation()
 
+=======
+import { usePostProfileImageMutation } from "../services/shopService";
+// import { usePostProfileImageMutation } from "../Services/shopServices";
+// import { saveImage } from "../Features/User/userSlice";
+
+const ImageSelector = ({ navigation }) => {
+    const [image, setImage] = useState(null);
+
+    const [triggerPostImage, result] = usePostProfileImageMutation()
+
+    const {localId} = useSelector(state => state.auth.value)
+
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     console.log(localId);
 
     const dispatch = useDispatch()
@@ -32,11 +49,14 @@ const ImageSelector = ({ navigation }) => {
         const {granted} = await ImagePicker.requestCameraPermissionsAsync()
         return granted
     }
+<<<<<<< HEAD
 
     const verifyGalleryPermissions = async () => {
         const {granted} = await ImagePicker.requestMediaLibraryPermissionsAsync()
         return granted
     }
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     /* const verifyCameraPermissions = async () => {
         const { granted } = await ImagePicker.requestCameraPermissionsAsync();
         if (!granted) {
@@ -45,6 +65,7 @@ const ImageSelector = ({ navigation }) => {
         return true;
     };
  */
+<<<<<<< HEAD
 
     const pickLibraryImage = async () => {
         try {
@@ -74,6 +95,9 @@ const ImageSelector = ({ navigation }) => {
 
     const pickImage = async () => {
         setIsImageFromCamera(true)
+=======
+    const pickImage = async () => {
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
         try {
             const permissionCamera = await verifyCameraPermissions()
@@ -89,7 +113,10 @@ const ImageSelector = ({ navigation }) => {
                 /* console.log(result);
                 console.log(result.assets[0].base64.length) */
                 if (!result.canceled){
+<<<<<<< HEAD
                     setImageURI(result.assets[0].uri)
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
                     setImage(image)
                 }
@@ -124,9 +151,12 @@ const ImageSelector = ({ navigation }) => {
         try {
             dispatch(setCameraImage(image))
             triggerPostImage({image, localId})
+<<<<<<< HEAD
             if (isImageFromCamera) {
                 const result = await ExpoLibrary.createAssetAsync(imageURI)
             }
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
             navigation.goBack()
         } catch (error) {
             console.log(error);
@@ -140,6 +170,7 @@ const ImageSelector = ({ navigation }) => {
         navigation.goBack(); */
     };
 
+<<<<<<< HEAD
     console.log({image});
 
     return (
@@ -149,6 +180,14 @@ const ImageSelector = ({ navigation }) => {
                     <Image source={{ uri: image || imageFromBase?.image }} style={styles.image} />
                     <AddButton title="Take another photo" onPress={pickImage} />
                     <AddButton title="Pick photo from gallery" onPress={pickLibraryImage} />
+=======
+    return (
+        <View style={styles.container}>
+            {image ? (
+                <>
+                    <Image source={{ uri: image }} style={styles.image} />
+                    <AddButton title="Take another photo" onPress={pickImage} />
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
                     <AddButton title="Confirm photo" onPress={confirmImage} />
                 </>
             ) : (

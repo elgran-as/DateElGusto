@@ -8,7 +8,16 @@ import InputForm from "../components/inputForm";
 import { useSignUpMutation } from "../services/authService";
 import { setUser } from "../features/User/userSlice";
 import { signupSchema } from "../validations/authSchema";
+<<<<<<< HEAD
 
+=======
+/* import { useSignUpMutation } from "../Services/authServices";
+import { setUser } from "../Features/User/userSlice";
+import { useSignUpMutation } from "../services/authService";
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/auth/authSlice";
+import { signupSchema } from "../validations/singupSchema"; */
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
 const SignupScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 import { colors } from "../constants/colors";
+=======
+import { StyleSheet, Text, TextInput, View } from 'react-native'
+import React, { useState } from 'react'
+import { colors } from '../constants/colors';
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
 const InputForm = ({
     label, 

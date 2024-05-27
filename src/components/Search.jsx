@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { colors } from "../constants/colors";
+=======
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native"
+import React, { useState } from "react"
+import { FontAwesome5 } from "@expo/vector-icons"
+import { AntDesign } from "@expo/vector-icons"
+import { colors } from "../constants/colors"
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 import { FontAwesome6 } from '@expo/vector-icons';
 
 const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
@@ -20,6 +28,7 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
 
       </View>
       <Pressable onPress={() => onSearch(keyword)}>
+<<<<<<< HEAD
         <FontAwesome6 name="magnifying-glass" size={20} color="black" />
       </Pressable>
       <Pressable onPress={() => setKeyword("")}>
@@ -27,6 +36,15 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
       </Pressable>
       <Pressable onPress={goBack}>
         <FontAwesome6 name="arrow-rotate-left" size={20} color="black" />
+=======
+        <FontAwesome6 name="searchengin" size={24} color="white" />
+      </Pressable>
+      <Pressable onPress={() => setKeyword("")}>
+        <FontAwesome5 name="eraser" size={24} color="white" />
+      </Pressable>
+      <Pressable onPress={goBack}>
+        <AntDesign name="back" size={24} color="white" />
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
       </Pressable>
     </View>
   )
@@ -52,7 +70,11 @@ const styles = StyleSheet.create({
     padding: 8,
     fontSize: 18,
     backgroundColor: colors.teal400,
+<<<<<<< HEAD
     color: colors.teal900,
+=======
+    color: colors.platinum,
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     borderRadius: 10,
   },
   errorText: {

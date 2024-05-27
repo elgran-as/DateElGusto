@@ -4,7 +4,11 @@ import { baseUrl } from "../databases/realtimeDatabase"
 export const shopApi = createApi({
     reducerPath: "shopApi", //Establish a unique name for the API
     baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
+<<<<<<< HEAD
     tagTypes: ['profileImageGet', 'locationGet', 'getOrders'], //Declare tags
+=======
+    tagTypes: ['profileImageGet'], //Declare tags
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     endpoints: (builder) => ({
         getCategories: builder.query({
             query: () => `categories.json`,
@@ -31,8 +35,12 @@ export const shopApi = createApi({
                 url: 'orders.json',
                 method: 'POST',
                 body: order
+<<<<<<< HEAD
             }),
             invalidatesTags: ['getOrders']
+=======
+            })
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
         }),
         getProfileImage: builder.query({
             query: (localId) => `profileImages/${localId}.json`,
@@ -49,6 +57,7 @@ export const shopApi = createApi({
             }),
             invalidatesTags: ['profileImageGet'] //Invalidates will trigger a refetch on profileImageGet
         }),
+<<<<<<< HEAD
         getLocation: builder.query({
             query: (localId) => `locations/${localId}.json`,
             providesTags: ['locationGet']
@@ -70,6 +79,8 @@ export const shopApi = createApi({
             query: () => `orders.json`,
             providesTags: ['getOrders']
         }),
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     }),
 })
 
@@ -80,7 +91,10 @@ export const {
     usePostOrderMutation,
     useGetProfileImageQuery,
     usePostProfileImageMutation,
+<<<<<<< HEAD
     useGetLocationQuery,
     usePostLocationMutation,
     useGetOrdersQuery
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 } = shopApi

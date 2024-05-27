@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import { Dimensions, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { colors } from "../constants/colors";
 import Card from "./Card";
 import {useDispatch, useSelector} from "react-redux";
 import { setCategorySelected } from "../features/Shop/shopSlice";
+=======
+import { Dimensions, Pressable, StyleSheet, Text, View } from "react-native"
+import React from "react"
+import { colors } from "../constants/colors"
+import Card from "./Card"
+import {useDispatch, useSelector} from 'react-redux'
+import { setCategorySelected } from "../features/Shop/shopSlice"
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
 const CategoryItem = ({ category, navigation }) => {
 

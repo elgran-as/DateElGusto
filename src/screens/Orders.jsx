@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React, {useState, useEffect} from "react";
 import OrderData from "../data/orders.json";
@@ -26,6 +27,19 @@ const OrderScreen = () => {
     <View>
         <FlatList
             data={ordersFiltered}
+=======
+import { FlatList, StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import OrderData from '../data/orders.json'
+import OrderItem from '../components/OrderItem'
+
+const OrderScreen = () => {
+  return (
+    <View>
+        <FlatList
+            data={OrderData}
+            keyExtractor={orderItem => orderItem.id}
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
             renderItem={({item}) => {
                 return (
                     <OrderItem 

@@ -6,15 +6,27 @@ import {
   View,
   useWindowDimensions
 } from "react-native"
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { useGetProductByIdQuery } from "../services/shopService";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../features/Cart/cartSlice";
 import Counter from "../components/Counter";
+=======
+import React, { useEffect, useState } from "react"
+// import allProducts from "../data/products.json"
+import { useGetProductByIdQuery } from "../services/shopService"
+import { useDispatch } from "react-redux"
+import { addCartItem } from "../features/Cart/cartSlice"
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
 const ItemDetail = ({ route, navigation }) => {
 
   const dispatch = useDispatch()
+<<<<<<< HEAD
+=======
+  // const [product, setProduct] = useState(null)
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
   const [orientation, setOrientation] = useState("portrait")
   const { width, height } = useWindowDimensions()
 
@@ -22,11 +34,27 @@ const ItemDetail = ({ route, navigation }) => {
 
   const {data: product, error, isLoading} = useGetProductByIdQuery(idSelected)
 
+<<<<<<< HEAD
+=======
+  //Landscape = horizontal
+  //Portrait = vertical
+
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
   useEffect(() => {
     if (width > height) setOrientation("landscape")
     else setOrientation("portrait")
   }, [width, height])
 
+<<<<<<< HEAD
+=======
+  /* useEffect(() => {
+    //Encontrar el producto por su id
+    const productSelected = allProducts.find(
+      (product) => product.id === idSelected
+    )
+    setProduct(productSelected)
+  }, [idSelected]) */
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
   const handleAddCart = () => {
     dispatch(addCartItem({...product, quantity: 1}))
@@ -54,7 +82,10 @@ const ItemDetail = ({ route, navigation }) => {
             <Text style={styles.price}>${product.price}</Text>
             <Button title="Add cart" onPress={handleAddCart}></Button>
           </View>
+<<<<<<< HEAD
           {/* <Counter/> */}
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
         </View>
       ) : null}
     </View>
@@ -79,7 +110,11 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
+<<<<<<< HEAD
     height: 200,
+=======
+    height: 250,
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
   },
   imageLandscape: {
     width: '45%',

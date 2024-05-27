@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Pressable, StyleSheet, Text, View, Platform, ImageBackground } from "react-native";
 import React, { useState, useEffect } from "react";
 import { colors } from "../constants/colors";
@@ -7,10 +8,21 @@ import { useSignInMutation } from "../services/authService";
 import { setUser } from "../features/User/userSlice";
 import { useDispatch } from "react-redux";
 import { insertSession } from "../persistence";
+=======
+import { Pressable, StyleSheet, Text, View } from "react-native"
+import React, { useState, useEffect } from "react"
+import { colors } from "../constants/colors"
+import InputForm from "../components/inputForm"
+import SubmitButton from "../components/submitButton"
+import { useSignInMutation } from "../services/authService"
+import { setUser } from "../features/User/userSlice"
+import { useDispatch } from "react-redux"
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
 
 const LoginScreen = ({ navigation }) => {
     const dispatch = useDispatch()
     const [triggerSignIn, result] = useSignInMutation()
+<<<<<<< HEAD
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -39,10 +51,26 @@ const LoginScreen = ({ navigation }) => {
                     console.log(error);
                 }
             })()
+=======
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+
+    useEffect(() => {
+        if (result.isSuccess) {
+            console.log("🕵🏻 ~ useEffect ~ result:", result)
+            dispatch(
+                setUser({
+                    email: result.data.email,
+                    idToken: result.data.idToken,
+                    localId: result.data.localId
+                })
+            )
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
         }
     }, [result])
 
     const onSubmit = () => {
+<<<<<<< HEAD
         if (!email.trim() ||!password.trim()) {
             setErrorMessage('Please fill in both fields.')
             return
@@ -70,12 +98,35 @@ const LoginScreen = ({ navigation }) => {
                 </View>
             </View>
         </ImageBackground>
+=======
+        triggerSignIn({ email, password })
+    }
+    return (
+        <View style={styles.main}>
+            <View style={styles.container}>
+                <Text style={styles.title}>Login to start</Text>
+                <InputForm label={"email"} onChange={setEmail} error={""} />
+                <InputForm
+                    label={"password"}
+                    onChange={setPassword}
+                    error={""}
+                    isSecure={true}
+                />
+                <SubmitButton onPress={onSubmit} title="Send" />
+                <Text style={styles.sub}>Not have an account?</Text>
+                <Pressable onPress={() => navigation.navigate("Signup")}>
+                    <Text style={styles.subLink}>Sign up</Text>
+                </Pressable>
+            </View>
+        </View>
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     )
 }
 
 export default LoginScreen
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
     backgroundImage: {
         width: "100%",
         height: "100%",
@@ -83,6 +134,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         resizeMode: "cover",
     },
+=======
+>>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
     main: {
         width: "100%",
         height: "100%",
