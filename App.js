@@ -1,60 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Navigation } from 'react-native-navigation';
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native"
+import { colors } from "./src/constants/colors"
+import { useFonts } from "expo-font"
+import Navigator from "./src/navigation/Navigator"
+import { Provider } from "react-redux"
+import store from "./src/store"
+import { dropSessionsTable, initSQLiteDB, truncateSessionsTable } from "./src/persistence"
+
+(async ()=> {
+    try {
+        if (Platform.OS !== 'web') {
+            const response = await initSQLiteDB()
+        }
+    } catch (error) {
+    }
+})()
 
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Date el gusto</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+const App = () => {
+    const [fontsLoaded, fontError] = useFonts({
+        Josefin: require("./assets/JosefinSans-Regular.ttf"),
+    })
+
+    if (!fontsLoaded || fontError) {
+        return null
+    }
+
+    if (fontsLoaded && !fontError) {
+        return (
+            <SafeAreaView style={styles.container}>
+                <Provider store={store}>
+                    <Navigator />
+                </Provider>
+            </SafeAreaView>
+        )
+    }
 }
 
-
-
-const createBottomTabNavigator = () => {
-  Navigation.registerComponent('ZapatillasScreen', () => ZapatillasScreen);
-  Navigation.registerComponent('RopaScreen', () => RopaScreen);
-  Navigation.registerComponent('AccesoriosScreen', () => AccesoriosScreen);
-
-  Navigation.setRoot({
-    root: {
-      bottomTabs: {
-        children: [
-          {
-            component: {
-              name: 'ZapatillasScreen',
-            },
-            icon: require('./assets/zapatillas.png'),
-            label: 'Zapatillas',
-          },
-          {
-            component: {
-              name: 'RopaScreen',
-            },
-            icon: require('../assets/ropa.png'),
-            label: 'Ropa',
-          },
-          {
-            component: {
-              name: 'AccesoriosScreen',
-            },
-            icon: require('../assets/accesorios.png'),
-            label: 'Accesorios',
-          },
-        ],
-      },
-    },
-  });
-};
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    container: {
+        marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        flex: 1,
+        // alignItems: "center",
+        backgroundColor: colors.teal200,
+    },
+})
+
+export default App
