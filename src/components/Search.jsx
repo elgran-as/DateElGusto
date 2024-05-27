@@ -20,13 +20,13 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
 
       </View>
       <Pressable onPress={() => onSearch(keyword)}>
-        <FontAwesome6 name="magnifying-glass" size={20} color="black" />
+        <FontAwesome6 name="searchengin" size={24} color="black" />
       </Pressable>
       <Pressable onPress={() => setKeyword("")}>
-        <FontAwesome5 name="eraser" size={20} color="black" />
+        <FontAwesome5 name="eraser" size={24} color="black" />
       </Pressable>
       <Pressable onPress={goBack}>
-        <FontAwesome6 name="arrow-rotate-left" size={20} color="black" />
+        <AntDesign name="back" size={24} color="black" />
       </Pressable>
     </View>
   )

@@ -6,12 +6,15 @@ import {
   View,
   useWindowDimensions
 } from "react-native"
+import React, { useEffect, useState } from "react";
 
+import { useGetProductByIdQuery } from "../services/shopService";
+import { useDispatch } from "react-redux";
+import { addCartItem } from "../features/Cart/cartSlice";
 
 const ItemDetail = ({ route, navigation }) => {
 
   const dispatch = useDispatch()
-
   const [orientation, setOrientation] = useState("portrait")
   const { width, height } = useWindowDimensions()
 
@@ -19,13 +22,18 @@ const ItemDetail = ({ route, navigation }) => {
 
   const {data: product, error, isLoading} = useGetProductByIdQuery(idSelected)
 
-
   useEffect(() => {
     if (width > height) setOrientation("landscape")
     else setOrientation("portrait")
   }, [width, height])
 
-
+  /* useEffect(() => {
+    //Encontrar el producto por su id
+    const productSelected = allProducts.find(
+      (product) => product.id === idSelected
+    )
+    setProduct(productSelected)
+  }, [idSelected]) */
 
   const handleAddCart = () => {
     dispatch(addCartItem({...product, quantity: 1}))
@@ -53,7 +61,6 @@ const ItemDetail = ({ route, navigation }) => {
             <Text style={styles.price}>${product.price}</Text>
             <Button title="Add cart" onPress={handleAddCart}></Button>
           </View>
-
         </View>
       ) : null}
     </View>
@@ -78,6 +85,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
+    height: 250,
   },
   imageLandscape: {
     width: '45%',

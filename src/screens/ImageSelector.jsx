@@ -99,7 +99,25 @@ const ImageSelector = ({ navigation }) => {
             console.log(error);
         }
 
-        
+        /* //Permission for camera
+        const isCameraOk = await verifyCameraPermissions();
+
+        if (isCameraOk) {
+            // No permissions request is necessary for launching the image library
+            let result = await ImagePicker.launchCameraAsync({
+                mediaTypes: ImagePicker.MediaTypeOptions.All,
+                allowsEditing: true,
+                aspect: [1, 1],
+                base64: true,
+                quality: 0.1,
+            });
+
+            if (!result.canceled) {
+                // console.log(result.assets[0].base64.length);
+                const image = `data:image/jpeg;base64,${result.assets[0].base64}`
+                setImage(image)
+            }
+        } */
     };
     
     const confirmImage = async () => {
@@ -112,8 +130,17 @@ const ImageSelector = ({ navigation }) => {
             navigation.goBack()
         } catch (error) {
             console.log(error);
-        }        
+        }
+        /* try {
+            dispatch(setCameraImage(image));
+            triggerSaveImage({image, localId})
+        } catch (error) {
+            console.log(error);
+        }
+        navigation.goBack(); */
     };
+
+    console.log({image});
 
     return (
         <View style={styles.container}>

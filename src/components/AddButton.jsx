@@ -2,7 +2,6 @@ import { Pressable, StyleSheet, Text } from "react-native";
 import React from "react";
 import { colors } from "../constants/colors";
 
-
 const AddButton = ({
     title = "",
     onPress = () => {},
