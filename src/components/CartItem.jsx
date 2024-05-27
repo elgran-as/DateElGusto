@@ -11,7 +11,7 @@ const CartItem = ({ cartItem, onDelete }) => {
                 <Text style={styles.text2}>{cartItem.discountPercentag}</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
             </View>
-            <Entypo name="trash" size={30} color="black" onPress={onDelete}  />
+            <Entypo name="trash" size={30} color="black"onPress={onDelete} />
         </View>
     );
 };
@@ -21,7 +21,7 @@ export default CartItem;
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: colors.platinum,
+        backgroundColor: colors.teal600,
         padding: 10,
         margin: 10,
         borderWidth: 2,

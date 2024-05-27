@@ -1,4 +1,9 @@
-
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import { colors } from "../constants/colors";
+import ProductItem from "../components/ProductItem";
+import Search from "../components/Search";
+import { useState, useEffect } from "react";
+import { useGetProductsByCategoryQuery } from "../services/shopService";
 
 const ItemListCategory = ({
   setCategorySelected = () => {},
@@ -13,6 +18,8 @@ const ItemListCategory = ({
 
   const {data: productsFetched, error: errorFromFetch, isLoading} = useGetProductsByCategoryQuery(categorySelected)
 
+  /* console.log(errorFromFetch);
+  console.log(isLoading); */
 
   useEffect(() => {
     //Products filtered by category
@@ -33,7 +40,9 @@ const ItemListCategory = ({
       return
     }
 
-
+    /* const productsPrefiltered = products.filter(
+      (product) => product.category === categorySelected
+    ) */
     //Product filtered by name
     if (!isLoading) {
       const productsFilter = productsFetched.filter((product) =>
