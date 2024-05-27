@@ -3,63 +3,37 @@ import React from "react";
 import CartItem from "../components/CartItem";
 import { useSelector } from "react-redux";
 import { usePostOrderMutation } from "../services/shopService";
-
+import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
 
 const Cart = () => {
+    const navigation = useNavigation(); // Usa useNavigation
+    const { localId } = useSelector(state => state.auth.value);
+    const { items: CartData, total } = useSelector(state => state.cart.value);
+    const [triggerPostOrder, { isLoading }] = usePostOrderMutation();
 
-
-    const {localId} = useSelector(state => state.auth.value)
-    const {items: CartData, total} = useSelector(state => state.cart.value)
-
-    const [triggerPostOrder, result] = usePostOrderMutation()
-    /* const { items: cartItems, total } = useSelector((state) => state.cart.value)
-    const [triggerPost, result] = usePostOrderMutation()
-
-    console.log(cartItems)
-    console.log(result) */
-
-    /* let total = 0
-    for (const currentItem of CartData) {
-        console.log(currentItem.id);
-        total += currentItem.price * currentItem.quantity
-    } */
-
-    /* onConfirm = () => {
-        triggerPost({
-            total,
-            items: cartItems,
-            user: "userLoggedId",
-            date: new Date().toLocaleString(),
-        })
-    } */
-
-    const onConfirmOrder = () => {
-        triggerPostOrder({items: CartData, user: localId, total})
-        //Una vez generada la orden hay que limpiar el cart y/o que navegue hacia Home
-    }
-
-    console.log(result);
+    const onConfirmOrder = async () => {
+        await triggerPostOrder({ items: CartData, user: localId, total });
+        navigation.navigate('Orders'); // Navega a la pantalla de órdenes
+    };
 
     return (
         <View style={styles.container}>
             <FlatList
                 data={CartData}
-                keyExtractor={(pepe) => pepe.id}
-                renderItem={({ item }) => {
-                    return <CartItem cartItem={item} />
-                }}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => <CartItem cartItem={item} />}
             />
             <View style={styles.totalContainer}>
-                <Pressable onPress={onConfirmOrder}>
-                    <Text>Confirm</Text>
+                <Pressable onPress={onConfirmOrder} disabled={isLoading} style={styles.Confirm}>
+                    <Text style={styles.TextConfirm}>Confirm</Text>
                 </Pressable>
-                <Text>Total: ${total}</Text>
+                <Text style={styles.total}>Total: ${total}</Text>
             </View>
         </View>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;
 
 const styles = StyleSheet.create({
     container: {
@@ -71,5 +45,16 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        borderColor:"red",
     },
-})
+    Confirm:{
+        backgroundColor: "red",       
+    },
+    TextConfirm:{
+        fontStyle:"bold",
+        tintColor: "white",
+    },
+    total:{
+        margin:10,
+    },
+});
