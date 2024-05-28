@@ -19,8 +19,6 @@ const OrderScreen = () => {
     }
   }, [orders, isSuccess, localId])
 
-  
-
   return (
     <View>
         <FlatList
