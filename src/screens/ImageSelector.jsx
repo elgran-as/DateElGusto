@@ -19,15 +19,7 @@ const ImageSelector = ({ navigation }) => {
 
 
     const [triggerPostImage, result] = usePostProfileImageMutation()
-
-    console.log(localId);
-
     const dispatch = useDispatch()
-
-    /* const [triggerSaveImage, resultSaveImage] = usePostProfileImageMutation();
-    const dispatch = useDispatch();
-    const { localId } = useSelector((state) => state.auth.value); */
-
     const verifyCameraPermissions = async () => {
         const {granted} = await ImagePicker.requestCameraPermissionsAsync()
         return granted
@@ -37,14 +29,6 @@ const ImageSelector = ({ navigation }) => {
         const {granted} = await ImagePicker.requestMediaLibraryPermissionsAsync()
         return granted
     }
-    /* const verifyCameraPermissions = async () => {
-        const { granted } = await ImagePicker.requestCameraPermissionsAsync();
-        if (!granted) {
-            return false;
-        }
-        return true;
-    };
- */
 
     const pickLibraryImage = async () => {
         try {
@@ -67,10 +51,9 @@ const ImageSelector = ({ navigation }) => {
                 }
             }
         } catch (error) {
-            console.log(error)
+     
         }
     }
-
 
     const pickImage = async () => {
         setIsImageFromCamera(true)
@@ -86,38 +69,15 @@ const ImageSelector = ({ navigation }) => {
                     base64: true,
                     quality: 0.2    
                 })
-                /* console.log(result);
-                console.log(result.assets[0].base64.length) */
+        
                 if (!result.canceled){
                     setImageURI(result.assets[0].uri)
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
                     setImage(image)
                 }
-            }
-            
-        } catch (error) {
-            console.log(error);
+            }   
+        } catch (error) {    
         }
-
-        /* //Permission for camera
-        const isCameraOk = await verifyCameraPermissions();
-
-        if (isCameraOk) {
-            // No permissions request is necessary for launching the image library
-            let result = await ImagePicker.launchCameraAsync({
-                mediaTypes: ImagePicker.MediaTypeOptions.All,
-                allowsEditing: true,
-                aspect: [1, 1],
-                base64: true,
-                quality: 0.1,
-            });
-
-            if (!result.canceled) {
-                // console.log(result.assets[0].base64.length);
-                const image = `data:image/jpeg;base64,${result.assets[0].base64}`
-                setImage(image)
-            }
-        } */
     };
     
     const confirmImage = async () => {
@@ -129,15 +89,9 @@ const ImageSelector = ({ navigation }) => {
             }
             navigation.goBack()
         } catch (error) {
-            console.log(error);
+    
         }
-        /* try {
-            dispatch(setCameraImage(image));
-            triggerSaveImage({image, localId})
-        } catch (error) {
-            console.log(error);
-        }
-        navigation.goBack(); */
+     
     };
 
     console.log({image});
