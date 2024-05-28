@@ -11,7 +11,7 @@ const CartItem = ({ cartItem, onDelete }) => {
                 <Text style={styles.text2}>{cartItem.discountPercentag}</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
             </View>
-            <Entypo name="trash" size={30} color="black"onPress={onDelete} />
+            <Entypo name="trash" size={30} color="white"onPress={onDelete} />
         </View>
     );
 };

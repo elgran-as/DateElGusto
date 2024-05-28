@@ -23,7 +23,10 @@ const styles = StyleSheet.create({
     height: 70,
     backgroundColor: colors.teal900,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderTopLeftRadius: 30, 
+    borderTopRightRadius: 30,
+    
   },
   text: {
     color: colors.teal200,

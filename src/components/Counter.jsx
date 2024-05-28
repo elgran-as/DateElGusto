@@ -8,9 +8,6 @@ const Counter = () => {
     const count = useSelector(state => state.counter.value)
     const dispatch = useDispatch()
     const [inputToAdd, setInputToAdd] = useState(null);
-    // let count = 0
-    
-    console.log(count);
 
     return (
         <View style={styles.container}>
