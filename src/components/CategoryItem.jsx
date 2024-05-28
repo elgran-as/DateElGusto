@@ -22,10 +22,9 @@ const CategoryItem = ({ category, navigation }) => {
         </View>
       </Pressable>
     </Card>
+
   )
 }
-
-export default CategoryItem
 
 const styles = StyleSheet.create({
   cardContainer: {
@@ -45,8 +44,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.platinum,
   },
   text: {
-    color: colors.platinum,
+    color: colors.white,
     textAlign: "center",
     fontSize: 20,
   },
-})
+});
+
+export default CategoryItem;
