@@ -1,42 +1,49 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import OrderItem from "../components/OrderItem";
 import { useGetOrdersQuery } from "../services/shopService";
 import { useSelector } from "react-redux";
 
 const OrderScreen = () => {
+  const { localId } = useSelector((state) => state.auth.value);
+  const { data: orders, isSuccess } = useGetOrdersQuery(localId);
+  const [ordersFiltered, setOrdersFiltered] = useState([]);
 
-  const {localId} = useSelector(state => state.auth.value)
-  const {data: orders, isSuccess} = useGetOrdersQuery(localId)
-  const [ordersFiltered, setOrdersFiltered] = useState()
+  useEffect(() => {
+    if (isSuccess && orders) {
+      const responseTransformed = Object.values(orders);
 
-  useEffect(()=> {
-    if (isSuccess & orders) {
-      const responseTransformed = Object.values(orders)
-      
-      const ordersFiltered = responseTransformed.filter(order => order.user === localId)
-      setOrdersFiltered(ordersFiltered)
+      const ordersFiltered = responseTransformed.filter(
+        (order) => order.user === localId
+      );
+      setOrdersFiltered(ordersFiltered);
     }
-  }, [orders, isSuccess, localId])
-
-  
+  }, [orders, isSuccess, localId]);
 
   return (
-    <View>
-        <FlatList
-            data={ordersFiltered}
-            renderItem={({item}) => {
-                return (
-                    <OrderItem 
-                      order={item}
-                    />
-                )
-            }}
-        />
+    <View style={styles.container}>
+      <FlatList
+        data={ordersFiltered}
+        renderItem={({ item }) => {
+          return (
+            <View style={styles.itemContainer}>
+              <OrderItem order={item} />
+            </View>
+          );
+        }}
+      />
     </View>
-  )
-}
+  );
+};
 
-export default OrderScreen
+export default OrderScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 10,
+  },
+  itemContainer: {
+    marginBottom: 20,
+  },
+});
