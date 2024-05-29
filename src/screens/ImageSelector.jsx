@@ -19,7 +19,9 @@ const ImageSelector = ({ navigation }) => {
 
 
     const [triggerPostImage, result] = usePostProfileImageMutation()
+
     const dispatch = useDispatch()
+
     const verifyCameraPermissions = async () => {
         const {granted} = await ImagePicker.requestCameraPermissionsAsync()
         return granted
@@ -43,17 +45,16 @@ const ImageSelector = ({ navigation }) => {
                     quality: 0.2,
                 })
 
-                console.log(result);
-
                 if (!result.canceled){
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
                     setImage(image)
                 }
             }
         } catch (error) {
-     
+
         }
     }
+
 
     const pickImage = async () => {
         setIsImageFromCamera(true)
@@ -69,15 +70,17 @@ const ImageSelector = ({ navigation }) => {
                     base64: true,
                     quality: 0.2    
                 })
-        
+
                 if (!result.canceled){
                     setImageURI(result.assets[0].uri)
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
                     setImage(image)
                 }
-            }   
-        } catch (error) {    
+            }
+            
+        } catch (error) {
         }
+
     };
     
     const confirmImage = async () => {
@@ -89,12 +92,10 @@ const ImageSelector = ({ navigation }) => {
             }
             navigation.goBack()
         } catch (error) {
-    
+           ;
         }
-     
-    };
 
-    console.log({image});
+    };
 
     return (
         <View style={styles.container}>

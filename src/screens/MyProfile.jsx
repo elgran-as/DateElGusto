@@ -8,9 +8,7 @@ import { truncateSessionsTable } from "../persistence";
 
 const MyProfile = ({ navigation }) => {
 
-
     const dispatch = useDispatch()
-
     const { imageCamera, localId } = useSelector((state) => state.auth.value)
     const { data: imageFromBase } = useGetProfileImageQuery(localId)
 

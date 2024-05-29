@@ -28,6 +28,7 @@ const LocationSelector = ({ navigation }) => {
             },
             localId: localId
         })
+        
     }
 
     //Location requested on mount
@@ -49,7 +50,6 @@ const LocationSelector = ({ navigation }) => {
                 console.log(error);
             }
         })()
-
     }, [])
 
     //Reverse geocoding

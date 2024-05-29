@@ -15,7 +15,14 @@ const CategoryItem = ({ category, navigation }) => {
   }
 
   return (
-     <Card style={{ marginVertical: 10, marginHorizontal: 10, borderColor: 'rgba(255, 165, 0, 0.5)', borderWidth: 1, borderRadius:70 }}>
+     <Card style={{ 
+      marginVertical: 10,
+      marginHorizontal: 10, 
+      borderColor: 'rgba(255, 165, 0, 0.5)', 
+      borderWidth: 1, 
+      borderRadius:70 
+      }}
+      >
       <Pressable onPress={handleNavigate} style={styles.cardContainer}>
         <View style={styles.circleContainer}>
           <Text style={styles.text}>{category}</Text>

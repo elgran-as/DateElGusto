@@ -6,13 +6,13 @@ export const cartSlice = createSlice({
         value: {
             user: "userIdLogged",
             updatedAt: new Date().toLocaleString(),
-            total: 0, // Inicializamos el total a 0
-            items: [], // Lista vacía para los ítems del carrito
+            total: 0, 
+            items: [], 
         },
     },
     reducers: {
         addCartItem: (state, action) => {
-            // Lógica para agregar producto
+            
             const productExists = state.value.items.some(item => item.id === action.payload.id);
 
             if (productExists) {
