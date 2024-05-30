@@ -16,10 +16,12 @@ const CartItem = ({ cartItem, onDelete }) => {
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
-                <Text style={styles.text2}>{cartItem.discountPercentag}</Text>
+                <Text style={styles.text2}>{cartItem.discountPercentag}% off</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
             </View>
-            <Entypo name="trash" size={30} color="white"onPress={onDelete} />
+            <TouchableOpacity onPress={handleDelete}>
+                <Entypo name="trash" size={30} color="white" />
+            </TouchableOpacity>
         </View>
     );
 };
@@ -43,13 +45,15 @@ const styles = StyleSheet.create({
         alignItems: "flex-start",
     },
     text: {
-        fontFamily: "Josefin",
+        fontFamily: "Josefin", 
         fontSize: 19,
-        color: colors.teal400,
+        color: '#4B8BBE', 
     },
     text2: {
         fontFamily: "Josefin",
         fontSize: 14,
-        color: colors.teal600,
+        color: '#008080', 
     },
 });
+
+export default CartItem;

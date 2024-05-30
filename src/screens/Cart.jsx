@@ -3,17 +3,17 @@ import React from "react";
 import CartItem from "../components/CartItem";
 import { useSelector } from "react-redux";
 import { usePostOrderMutation } from "../services/shopService";
-import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
+import { useNavigation } from '@react-navigation/native'; 
 
 const Cart = () => {
-    const navigation = useNavigation(); // Usa useNavigation
+    const navigation = useNavigation(); 
     const { localId } = useSelector(state => state.auth.value);
     const { items: CartData, total } = useSelector(state => state.cart.value);
     const [triggerPostOrder, { isLoading }] = usePostOrderMutation();
 
     const onConfirmOrder = async () => {
         await triggerPostOrder({ items: CartData, user: localId, total });
-        navigation.navigate('Orders'); // Navega a la pantalla de órdenes
+        navigation.navigate('Orders'); 
     };
 
     return (
@@ -45,13 +45,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        borderColor:"black",
+        borderColor:"red",
     },
     Confirm:{
         backgroundColor: "red",       
     },
     TextConfirm:{
-        fontsize:"20",
         fontStyle:"bold",
         tintColor: "white",
     },

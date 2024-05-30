@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import OrderItem from "../components/OrderItem";
 import { useGetOrdersQuery } from "../services/shopService";
 import { useSelector } from "react-redux";

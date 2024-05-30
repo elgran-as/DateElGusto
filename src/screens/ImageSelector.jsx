@@ -51,6 +51,7 @@ const ImageSelector = ({ navigation }) => {
                 }
             }
         } catch (error) {
+
         }
     }
 
@@ -69,6 +70,7 @@ const ImageSelector = ({ navigation }) => {
                     base64: true,
                     quality: 0.2    
                 })
+
                 if (!result.canceled){
                     setImageURI(result.assets[0].uri)
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`

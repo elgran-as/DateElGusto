@@ -17,9 +17,9 @@ const CategoryItem = ({ category, navigation }) => {
   return (
      <Card style={{ 
       marginVertical: 10,
-      marginHorizontal: 10,
-      borderColor: 'rgba(255, 165, 0, 0.5)',
-      borderWidth: 1,
+      marginHorizontal: 10, 
+      borderColor: 'rgba(255, 165, 0, 0.5)', 
+      borderWidth: 1, 
       borderRadius:70 
       }}
       >
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 50,
   },
   circleContainer: {
     position: 'absolute',
