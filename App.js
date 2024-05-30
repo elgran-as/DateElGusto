@@ -19,9 +19,13 @@ import { dropSessionsTable, initSQLiteDB, truncateSessionsTable } from "./src/pe
 
 const App = () => {
     const [fontsLoaded, fontError] = useFonts({
+<<<<<<< HEAD
         Josefin: require("./assets/font/JosefinSans-Regular.ttf"),
         Lobster: require("./assets/font/Lobster-Regular.ttf"),
 
+=======
+        Josefin: require("./assets/JosefinSans-Regular.ttf"),
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     })
 
     if (!fontsLoaded || fontError) {
@@ -43,7 +47,10 @@ const styles = StyleSheet.create({
     container: {
         marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flex: 1,
+<<<<<<< HEAD
         // alignItems: "center",
+=======
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
         backgroundColor: colors.teal200,
     },
 })

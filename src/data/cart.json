@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
     {
         "id": 50,
         "title": "Women Shoes",
@@ -37,4 +38,34 @@
         ],
         "quantity": 1
     }
+=======
+  {
+    "category": "Guarniciones",
+    "description": "Los tater tots son unos bocados de patata rallada frita con especias. Su exterior es crujiente y su interior muy suave. Son muy populares en Reino Unido y Estados Unidos, y resultan ideales como aperitivo o guarnición diferente y muy original.",
+    "discountPercentage": 12.34,
+    "id": 69,
+    "images": [
+      "https://cdn.pixabay.com/photo/2019/01/12/23/50/swabian-3929566_1280.jpg"
+    ],
+    "price": 5.99,
+    "rating": 4.2,
+    "stock": 30,
+    "thumbnail": "https://cdn.pixabay.com/photo/2019/01/12/23/50/swabian-3929566_1280.jpg",
+    "title": "Tater tots"
+  },
+  {
+    "category": "Panchos",
+    "description": "Una versión casi inmejorable, la humedad de la panceta sobre la salchicha grillada, el dulce, ácido y fresco de los pepinos y esa simple salsa que conquista nuestros corazones.",
+    "discountPercentage": 25.34,
+    "id": 55,
+    "images": [
+      "https://cdn.pixabay.com/photo/2017/06/24/05/26/hot-dog-2436747_1280.jpg"
+    ],
+    "price": 2.99,
+    "rating": 4.1,
+    "stock": 30,
+    "thumbnail": "https://cdn.pixabay.com/photo/2017/06/24/05/26/hot-dog-2436747_1280.jpg",
+    "title": "a la neoyorquina"
+  }
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
 ]

@@ -5,6 +5,7 @@
         "createdAt": 1679869276580,
         "items": [
             {
+<<<<<<< HEAD
                 "id": 69,
                 "title": "Golden Watch Pearls Bracelet Watch",
                 "description": "Product details of Golden Watch Pearls Bracelet Watch For Girls - Golden Chain Ladies Bracelate Watch for Women",
@@ -43,6 +44,35 @@
                 ],
                 "quantity": 2
             }
+=======
+                "category": "Panchos",
+                "description": "Llamados completos en Chile son un clásico del país trasandino. Una comida callejera típica, un sándwich generoso, barato y rico tan clásico de los mercados de Santiago.",
+                "discountPercentage": 17.43,
+                "id": 51,
+                "images": [
+                  "https://cdn.pixabay.com/photo/2023/07/17/14/43/food-8132793_1280.jpg"
+                ],
+                "price": 3.99,
+                "rating": 4.2,
+                "stock": 40,
+                "thumbnail": "https://cdn.pixabay.com/photo/2023/07/17/14/43/food-8132793_1280.jpg",
+                "title": "a la chilena"
+              },
+              {
+                "category": "Empanadas",
+                "description": "En casa siempre me animo a probar las recetas tradicionales de otros países, pues me encanta aprender a elaborar diferentes platos de culturas con sus sabores más característicos. En esta ocasión vamos a preparar unas deliciosas empanadas árabes, las cuales se hacen indistintamente con carne de cordero o carne de vacuno.",
+                "discountPercentage": 17.12,
+                "id": 34,
+                "images": [
+                  "https://cdn.pixabay.com/photo/2015/01/08/04/09/empanada-592361_1280.jpg"
+                ],
+                "price": 12.99,
+                "rating": 4.7,
+                "stock": 120,
+                "thumbnail": "https://cdn.pixabay.com/photo/2015/01/08/04/09/empanada-592361_1280.jpg",
+                "title": "Arabes"
+              }
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
         ]
     },
     {
@@ -51,6 +81,7 @@
         "createdAt": 1679832276580,
         "items": [
             {
+<<<<<<< HEAD
                 "id": 93,
                 "title": "Automatic Motor Gas Motorcycles",
                 "description": "150cc 4-Stroke Motorcycle Automatic Motor Gas Motorcycles Scooter motorcycles 150cc scooter",
@@ -90,6 +121,35 @@
                 ],
                 "quantity": 3
             }
+=======
+                "category": "Hamburguesas",
+                "description": "La hamburguesa de salmón es una opción saludable y deliciosa para aquellos que buscan reducir su consumo de carne roja. Se prepara con filetes de salmón fresco, que se trituran en un procesador de alimentos con pan rallado, huevo y condimentos. La mezcla se forma en hamburguesas y se cocina a la parrilla. Se sirve en un pan de hamburguesa tostado con aguacate, pepino, cebolla roja y mayonesa de eneldo. Esta hamburguesa es rica en ácidos grasos omega-3, vitaminas y minerales, y tiene un sabor fresco y delicioso.",
+                "discountPercentage": 16.23,
+                "id": 28,
+                "images": [
+                  "https://cdn.pixabay.com/photo/2021/01/06/10/11/burger-5893927_1280.jpg"
+                ],
+                "price": 16.99,
+                "rating": 4.9,
+                "stock": 40,
+                "thumbnail": "https://cdn.pixabay.com/photo/2021/01/06/10/11/burger-5893927_1280.jpg",
+                "title": "de Salmón"
+              },
+              {
+                "category": "Pizzas",
+                "description": "El pollo es uno de los alimentos más consumidos, combinado con el sabor de la pizza crean una de las opciones más requeridas por los comensales. Esta pizza es tipo California, se ha hecho popular en variaciones como pollo barbecue.",
+                "discountPercentage": 30.31,
+                "id": 9,
+                "images": [
+                  "https://cdn.pixabay.com/photo/2020/05/17/04/22/pizza-5179939_1280.jpg"
+                ],
+                "price": 10.99,
+                "rating": 4.1,
+                "stock": 20,
+                "thumbnail": "https://cdn.pixabay.com/photo/2020/05/17/04/22/pizza-5179939_1280.jpg",
+                "title": "de Pollo"
+              }
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
         ]
     }
 ]

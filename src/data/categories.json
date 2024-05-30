@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
     "smartphones",
     "laptops",
     "fragrances",
@@ -19,4 +20,14 @@
     "automotive",
     "motorcycle",
     "lighting"
+=======
+    
+    "Pizzas",
+    "Hamburguesas",
+    "Empandas",
+    "Sandwich",
+    "Panchos",
+    "Guarniciones"		
+  
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
 ]

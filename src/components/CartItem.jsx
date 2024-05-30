@@ -1,9 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { colors } from "../constants/colors";
-import { Entypo } from "@expo/vector-icons";
+import React from 'react';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import { Entypo } from '@expo/vector-icons';
+import { removeCartItem } from '../features/Cart/cartSlice';
 
 const CartItem = ({ cartItem, onDelete }) => {
+    const dispatch = useDispatch();
+
+    const handleDelete = () => {
+        dispatch(removeCartItem(cartItem.id)); 
+        onDelete(); 
+    };
+
     return (
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
@@ -16,12 +24,10 @@ const CartItem = ({ cartItem, onDelete }) => {
     );
 };
 
-export default CartItem;
-
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: colors.teal600,
+        backgroundColor: '#008080', 
         padding: 10,
         margin: 10,
         borderWidth: 2,

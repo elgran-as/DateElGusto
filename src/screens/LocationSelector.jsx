@@ -1,11 +1,15 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import * as Location from "expo-location";
+<<<<<<< HEAD
 
 import AddButton from "../components/AddButton";
 /* import { usePostUserLocationMutation } from "../Services/shopServices";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserLocation } from "../Features/User/userSlice"; */
+=======
+import AddButton from "../components/AddButton";
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
 import MapPreview from "../components/MapPreview";
 import { googleMapsApiKey } from "../databases/googleMaps";
 import { colors } from "../constants/colors";
@@ -19,10 +23,13 @@ const LocationSelector = ({ navigation }) => {
     const [triggerPostUserLocation, result] = usePostLocationMutation()
     const {localId} = useSelector(state => state.auth.value)
 
+<<<<<<< HEAD
     /* const {localId} = useSelector(state => state.userReducer.value)
     const [triggerPostAddress, result] = usePostUserLocationMutation();
     const dispatch = useDispatch(); */
 
+=======
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     const onConfirmAddress = () => {
 
         const date = new Date()
@@ -36,6 +43,7 @@ const LocationSelector = ({ navigation }) => {
             },
             localId: localId
         })
+<<<<<<< HEAD
         /* const locationFormatted = {
             latitude: location.latitude,
             longitude: location.longitude,
@@ -60,6 +68,9 @@ const LocationSelector = ({ navigation }) => {
         dispatch(setUserLocation(locationFormatted))
         
         triggerPostAddress({location: locationFormatted, localId}) */
+=======
+        
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     }
 
     //Location requested on mount
@@ -81,6 +92,7 @@ const LocationSelector = ({ navigation }) => {
                 console.log(error);
             }
         })()
+<<<<<<< HEAD
 
         /* (async () => {
             try {
@@ -101,6 +113,8 @@ const LocationSelector = ({ navigation }) => {
                 setError(error.message)
             }
         })() */
+=======
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     }, [])
 
     //Reverse geocoding

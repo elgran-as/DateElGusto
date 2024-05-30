@@ -17,7 +17,10 @@ export const initSQLiteDB = () => {
             )
         })
     })
+<<<<<<< HEAD
     console.log("will return promise")
+=======
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     return promise
 }
 

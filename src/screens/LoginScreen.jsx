@@ -56,15 +56,22 @@ const LoginScreen = ({ navigation }) => {
     }, [result]);
 
     const onSubmit = () => {
+<<<<<<< HEAD
         // Aquí puedes validar los campos antes de llamar a triggerSignIn
         // Si hay errores, actualiza los estados de error correspondientes
+=======
+      
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
         if (!email ||!password) {
             setEmailError(email? "" : "Email is required");
             setPasswordError(password? "" : "Password is required");
             return;
         }
 
+<<<<<<< HEAD
         // Llama a triggerSignIn solo si no hay errores
+=======
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
         triggerSignIn({ email, password });
     };
 

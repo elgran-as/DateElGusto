@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
 =======
 # Created by https://www.toptal.com/developers/gitignore/api/reactnative
@@ -259,3 +260,6 @@ xcuserdata/
 
 # End of https://www.toptal.com/developers/gitignore/api/reactnative
 >>>>>>> 7430ad11cd450a5776989bbcdab77068bc9e8779
+=======
+node_modules
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466

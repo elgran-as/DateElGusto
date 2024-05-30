@@ -1,7 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const shopSlice = createSlice({
+<<<<<<< HEAD
     name: "shop",
+=======
+    name: "DATE EL GUSTO",
+>>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     initialState: {
         value: {
             categorySelected: "",
