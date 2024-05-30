@@ -20,19 +20,8 @@ const ImageSelector = ({ navigation }) => {
 
     const [triggerPostImage, result] = usePostProfileImageMutation()
 
-<<<<<<< HEAD
-    console.log(localId);
-
     const dispatch = useDispatch()
 
-    /* const [triggerSaveImage, resultSaveImage] = usePostProfileImageMutation();
-    const dispatch = useDispatch();
-    const { localId } = useSelector((state) => state.auth.value); */
-
-=======
-    const dispatch = useDispatch()
-
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     const verifyCameraPermissions = async () => {
         const {granted} = await ImagePicker.requestCameraPermissionsAsync()
         return granted
@@ -42,17 +31,6 @@ const ImageSelector = ({ navigation }) => {
         const {granted} = await ImagePicker.requestMediaLibraryPermissionsAsync()
         return granted
     }
-<<<<<<< HEAD
-    /* const verifyCameraPermissions = async () => {
-        const { granted } = await ImagePicker.requestCameraPermissionsAsync();
-        if (!granted) {
-            return false;
-        }
-        return true;
-    };
- */
-=======
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
 
     const pickLibraryImage = async () => {
         try {
@@ -67,22 +45,12 @@ const ImageSelector = ({ navigation }) => {
                     quality: 0.2,
                 })
 
-<<<<<<< HEAD
-                console.log(result);
-
-=======
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
                 if (!result.canceled){
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
                     setImage(image)
                 }
             }
         } catch (error) {
-<<<<<<< HEAD
-            console.log(error)
-=======
-
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
         }
     }
 
@@ -101,12 +69,6 @@ const ImageSelector = ({ navigation }) => {
                     base64: true,
                     quality: 0.2    
                 })
-<<<<<<< HEAD
-                /* console.log(result);
-                console.log(result.assets[0].base64.length) */
-=======
-
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
                 if (!result.canceled){
                     setImageURI(result.assets[0].uri)
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
@@ -115,33 +77,8 @@ const ImageSelector = ({ navigation }) => {
             }
             
         } catch (error) {
-<<<<<<< HEAD
-            console.log(error);
         }
 
-        /* //Permission for camera
-        const isCameraOk = await verifyCameraPermissions();
-
-        if (isCameraOk) {
-            // No permissions request is necessary for launching the image library
-            let result = await ImagePicker.launchCameraAsync({
-                mediaTypes: ImagePicker.MediaTypeOptions.All,
-                allowsEditing: true,
-                aspect: [1, 1],
-                base64: true,
-                quality: 0.1,
-            });
-
-            if (!result.canceled) {
-                // console.log(result.assets[0].base64.length);
-                const image = `data:image/jpeg;base64,${result.assets[0].base64}`
-                setImage(image)
-            }
-        } */
-=======
-        }
-
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     };
     
     const confirmImage = async () => {
@@ -153,25 +90,10 @@ const ImageSelector = ({ navigation }) => {
             }
             navigation.goBack()
         } catch (error) {
-<<<<<<< HEAD
-            console.log(error);
-        }
-        /* try {
-            dispatch(setCameraImage(image));
-            triggerSaveImage({image, localId})
-        } catch (error) {
-            console.log(error);
-        }
-        navigation.goBack(); */
-    };
-
-    console.log({image});
-=======
            ;
         }
 
     };
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
 
     return (
         <View style={styles.container}>

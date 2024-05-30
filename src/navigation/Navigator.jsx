@@ -17,10 +17,6 @@ const Navigator = () => {
         const response = await getSession()
         if (response.rows._array.length) {
           const user = response.rows._array[0]
-<<<<<<< HEAD
-=======
-          console.log({user});
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
           dispatch(setUser({
             email: user.email,
             localId: user.localId,
@@ -28,10 +24,6 @@ const Navigator = () => {
           }))
         }
       } catch (error) {
-<<<<<<< HEAD
-=======
-        console.log(error);
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
       }
     })()
   }, [])

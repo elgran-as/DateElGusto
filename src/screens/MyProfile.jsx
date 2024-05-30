@@ -7,16 +7,8 @@ import { clearUser } from "../features/User/userSlice";
 import { truncateSessionsTable } from "../persistence";
 
 const MyProfile = ({ navigation }) => {
-<<<<<<< HEAD
-    /* const {localId, imageCamera} = useSelector(state => state.auth.value)
-    const {data: imageFromBase} = useGetProfileImageQuery(localId) */
 
     const dispatch = useDispatch()
-
-=======
-
-    const dispatch = useDispatch()
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     const { imageCamera, localId } = useSelector((state) => state.auth.value)
     const { data: imageFromBase } = useGetProfileImageQuery(localId)
 

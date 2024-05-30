@@ -2,11 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { baseUrl } from "../databases/realtimeDatabase"
 
 export const shopApi = createApi({
-<<<<<<< HEAD
-    reducerPath: "shopApi", //Establish a unique name for the API
-=======
     reducerPath: "shopApi", 
->>>>>>> 77aa8dc1b75ce4fa9a0eba4af60de805dd490466
     baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
     tagTypes: ['profileImageGet', 'locationGet', 'getOrders'], //Declare tags
     endpoints: (builder) => ({
