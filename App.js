@@ -19,7 +19,9 @@ import { dropSessionsTable, initSQLiteDB, truncateSessionsTable } from "./src/pe
 
 const App = () => {
     const [fontsLoaded, fontError] = useFonts({
-        Josefin: require("./assets/JosefinSans-Regular.ttf"),
+        Josefin: require("./assets/font/JosefinSans-Regular.ttf"),
+        Lobster: require("./assets/font/Lobster-Regular.ttf"),
+
     })
 
     if (!fontsLoaded || fontError) {

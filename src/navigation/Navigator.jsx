@@ -17,7 +17,6 @@ const Navigator = () => {
         const response = await getSession()
         if (response.rows._array.length) {
           const user = response.rows._array[0]
-          console.log({user});
           dispatch(setUser({
             email: user.email,
             localId: user.localId,
@@ -25,7 +24,6 @@ const Navigator = () => {
           }))
         }
       } catch (error) {
-        console.log(error);
       }
     })()
   }, [])

@@ -45,12 +45,13 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        borderColor:"red",
+        borderColor:"black",
     },
     Confirm:{
         backgroundColor: "red",       
     },
     TextConfirm:{
+        fontsize:"20",
         fontStyle:"bold",
         tintColor: "white",
     },
