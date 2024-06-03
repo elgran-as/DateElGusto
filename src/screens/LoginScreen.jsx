@@ -27,8 +27,8 @@ const LoginScreen = ({ navigation }) => {
     const [triggerSignIn, result] = useSignInMutation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [emailError, setEmailError] = useState(""); // Estado para manejar errores de email
-    const [passwordError, setPasswordError] = useState(""); // Estado para manejar errores de contraseña
+    const [emailError, setEmailError] = useState(""); // errores de email
+    const [passwordError, setPasswordError] = useState(""); // errores de contraseña
 
     useEffect(() => {
         if (result?.data && result.isSuccess) {
@@ -69,7 +69,7 @@ const LoginScreen = ({ navigation }) => {
     return (
         <ImageBackground source={{ uri: 'https://st3.depositphotos.com/4006379/15836/v/950/depositphotos_158368554-stock-illustration-cute-cartoon-fast-food-seamless.jpg' }} style={styles.backgroundImage}>
             <View style={styles.main}>
-                <View style={[styles.container, { backgroundColor: hexToRgbA('#add8e6', 0.8) }]}>
+                <View style={[styles.container, { backgroundColor: hexToRgbA('#F2542D', 0.8) }]}>
                     <Text style={styles.title}>Login to start</Text>
                     <InputForm 
                         label={"email"} 
