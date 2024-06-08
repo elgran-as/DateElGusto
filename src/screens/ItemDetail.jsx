@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   mainContainerLandscape: {
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "center",
     padding: 10,
     gap: 10,
   },
@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
     height: 250,
   },
   imageLandscape: {
-    width: '45%',
-    height: 200
+    width: '50%',
+    height: 300,
   },
   textContainer: {
     flexDirection: "column",

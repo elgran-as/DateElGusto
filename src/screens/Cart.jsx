@@ -4,6 +4,7 @@ import CartItem from "../components/CartItem";
 import { useSelector } from "react-redux";
 import { usePostOrderMutation } from "../services/shopService";
 import { useNavigation } from '@react-navigation/native'; 
+import { colors } from "../constants/colors";
 
 const Cart = () => {
     const navigation = useNavigation(); 
@@ -25,7 +26,7 @@ const Cart = () => {
             />
             <View style={styles.totalContainer}>
                 <Pressable onPress={onConfirmOrder} disabled={isLoading} style={styles.Confirm}>
-                    <Text style={styles.TextConfirm}>Confirm</Text>
+                    <Text style={styles.TextConfirm2}>Confirm</Text>
                 </Pressable>
                 <Text style={styles.total}>Total: ${total}</Text>
             </View>
@@ -48,11 +49,13 @@ const styles = StyleSheet.create({
         borderColor:"red",
     },
     Confirm:{
-        backgroundColor: "red",       
+        backgroundColor: colors.teal600, 
+        padding:10,
+        borderRadius: 10,      
     },
-    TextConfirm:{
+    TextConfirm2:{
         fontStyle:"bold",
-        tintColor: "white",
+        color: "white",
     },
     total:{
         margin:10,
