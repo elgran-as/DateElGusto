@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
         backgroundColor: hexToRgbA('#F2542D', 0.8),
         width: 140,
         height: 140,
-        shadowColor: colors.platinum,
+        marginLeft: 15,
+        marginTop: 20,
         shadowOffset: {
           width: 4,
           height: 4,
