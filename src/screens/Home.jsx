@@ -29,6 +29,7 @@ const Home = ({ route, navigation }) => {
             renderItem={({ item }) => (
               <CategoryItem navigation={navigation} category={item} />
             )}
+            numColumns={2}
           />
         </ImageBackground>
       </View>
