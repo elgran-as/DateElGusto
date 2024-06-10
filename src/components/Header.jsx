@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: 70,
-    backgroundColor: colors.teal900,
+    backgroundColor: colors.teal200,
     justifyContent: 'center',
     alignItems: 'center',
     borderTopLeftRadius: 30, 
@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
     
   },
   text: {
-    color: colors.teal200,
+    color: colors.platinum,
     fontFamily: 'Josefin',
     fontSize: 22
   },
   textSm: {
-    color: colors.teal200,
+    color: colors.platinum,
     fontFamily: 'Josefin',
     fontSize: 16
   }

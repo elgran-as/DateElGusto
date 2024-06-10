@@ -26,7 +26,7 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
         <FontAwesome5 name="eraser" size={20} color="black" />
       </Pressable>
       <Pressable onPress={goBack}>
-        <AntDesign name="arrow-rotate-left" size={20} color="black" />
+        <FontAwesome6 name="arrow-rotate-left" size={20} color="black" />
       </Pressable>
     </View>
   )

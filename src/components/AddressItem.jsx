@@ -30,7 +30,7 @@ export default AddressItem;
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: colors.teal900,
+        backgroundColor: colors.teal600,
         padding: 10,
         margin: 10,
         borderWidth: 2,
