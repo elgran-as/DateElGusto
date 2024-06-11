@@ -30,12 +30,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.platinum,
-    fontFamily: 'Josefin',
+    fontFamily: 'Lobster',
     fontSize: 22
   },
   textSm: {
     color: colors.platinum,
-    fontFamily: 'Josefin',
+    fontFamily: 'Lobster',
     fontSize: 16
   }
 })
