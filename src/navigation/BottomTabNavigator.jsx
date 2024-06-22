@@ -33,7 +33,7 @@ const BottomTabNavigator = () => {
                                 <FontAwesome5
                                     name="store"
                                     size={24}
-                                    color={focused ? "black" : colors.teal600}
+                                    color={focused ? "white" : colors.teal600}
                                 />
                             </View>
                         )
@@ -50,7 +50,7 @@ const BottomTabNavigator = () => {
                                 <FontAwesome6
                                     name="cart-shopping"
                                     size={24}
-                                    color={focused ? "black" : colors.teal600}
+                                    color={focused ? "white" : colors.teal600}
                                 />
                             </View>
                         )
@@ -64,7 +64,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <Ionicons name="receipt-outline" size={24} color={ focused ? 'black' : colors.teal600} />
+                                <Ionicons name="receipt-outline" size={24} color={ focused ? 'white' : colors.teal600} />
                             </View>
                         )
                     },
@@ -77,7 +77,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <Ionicons name="person-circle" size={24} color={ focused ? 'black' : colors.teal600}  />
+                                <Ionicons name="person-circle" size={24} color={ focused ? 'white' : colors.teal600}  />
                             </View>
                         )
                     },

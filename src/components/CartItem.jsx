@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { Entypo } from '@expo/vector-icons';
 import { removeCartItem } from '../features/Cart/cartSlice';
+import { colors } from '../constants/colors';
 
 const CartItem = ({ cartItem, onDelete }) => {
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const CartItem = ({ cartItem, onDelete }) => {
     return (
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
+                <Text style={styles.text}>{cartItem.category}</Text>
                 <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
                 <Text style={styles.text2}>{cartItem.discountPercentag}% off</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
@@ -29,7 +31,7 @@ const CartItem = ({ cartItem, onDelete }) => {
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: '#008080', 
+        backgroundColor: colors.teal600, 
         padding: 10,
         margin: 10,
         borderWidth: 2,
