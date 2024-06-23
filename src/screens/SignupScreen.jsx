@@ -24,7 +24,6 @@ const SignupScreen = ({ navigation }) => {
 
     useEffect(()=> {
         if (result.isSuccess) {
-            console.log("🕵🏻 ~ useEffect ~ result:", result)
             dispatch(
                 setUser({
                     email: result.data.email,
