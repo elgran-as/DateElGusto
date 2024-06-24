@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.teal200,
     justifyContent: 'center',
     alignItems: 'center',
-    borderTopLeftRadius: 40, 
-    borderTopRightRadius: 40,
+    borderTopLeftRadius: 20, 
+    borderTopRightRadius: 20,
     
   },
   text: {

@@ -8,6 +8,11 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
   const [keyword, setKeyword] = useState("")
   return (
     <View style={styles.container}>
+      <View>
+      <Pressable onPress={goBack}>
+        <FontAwesome6 name="arrow-rotate-left" size={20} color="black" />
+      </Pressable>
+      </View>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -24,9 +29,7 @@ const Search = ({ onSearch = () => {}, error = "", goBack = () => {} }) => {
       <Pressable onPress={() => setKeyword("")}>
         <FontAwesome5 name="eraser" size={20} color="black" />
       </Pressable>
-      <Pressable onPress={goBack}>
-        <FontAwesome6 name="arrow-rotate-left" size={20} color="black" />
-      </Pressable>
+     
     </View>
   )
 }
